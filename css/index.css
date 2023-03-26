@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    --color: rgb(125, 156, 95);
+    margin: 0;
+    font-family: monospace;
+    color: #000;
+}
+
+header {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: -webkit-sticky-;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 250;
+    height: var(--header-height);
+}
+
+.header {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.header .logo {
+    font-family: 'Comforter Brush', cursive;
+    padding-left: 40px;
+    font-size: 38px;
+}
+
+.header .menu .drawer {
+    display: flex;
+    height: var(--header-height);
+    padding-right: 100px;
+}
+
+.header .menu .drawer a {
+    text-transform: capitalize;
+    transition: all 0.1s linear;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    color: #585b63;
+    font-size: 17.4px;
+}
+.header .menu .drawer a:active {
+    background: #e0e0e0;
+}
+
+.menu-btn,
+.close-btn {
+    background: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-btn {
+    left: 3px;
+}
+
+.close-btn:active,
+.menu-btn:active {
+    background: #f3f3f3;
+}
+
+.img {
+    height: calc(100vh - 53px);
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .header .menu .drawer {
+        padding: 0;
+    }
+}
+
+.body {
+    overflow: hidden;
+}
+
+.slider {
+
+    position: relative;
+    background-color: rgb(125, 156, 95);
+}
+
+.img-slider {
+    width: 1200px;
+    margin: auto;
+}
+
+.text {
+    position: absolute;
+    bottom: 240px;
+    left: 120px;
+    font-family: monospace;
+    color: white;
+    font-size: 24px;
+}
+
+.text>h1 {
+    padding: 12px 0px;
+}
+
+.text>h2 {
+    padding: 12px 0px;
+}
+
+.btn {
+    width: 1200px;
+    position: absolute;
+    display: flex;
+    bottom: 120px;
+    left: 120px;
+}
+
+.btn>div>a {
+    color: white;
+}
+
+.btn>div {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 2px solid white;
+    margin: 12px;
+    padding: 20px 28px;
+}
+
+.btn>div:hover {
+    transition: 0.9s;
+    background-color: white;
+    color: var(--color);
+}
+
+.login-now {
+    background-color: rgb(65, 116, 14);
+}
+
+.btn>div:hover a {
+    color: var(--color);
+}
+
+.nav-content {
+    margin-top: 64px;
+    width: 100%;
+    text-align: center;
+}
+
+.text-content {
+    padding: 20px 10px;
+}
+
+.type {
+    letter-spacing: 5px;
+    font-family: monospace;
+}
+
+.item-text p {
+    font-size: 20px;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+.item-content {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: rgb(103, 245, 117);
+    border: 2px solid rgb(23, 85, 31);
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
+    border-radius: 30px;
+    width: 360px;
+}
+
+.item-img>img {
+    margin-top: 32px;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.item-text {
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 40px;
+    line-height: 40px;
+    width: 80%;
+    border: 2px solid rgb(23, 85, 31);
+    background-color: white;
+    border-radius: 20px;
+}
+
+.nav-reason {
+    margin-top: 64px;
+    width: 100%;
+    background-color: rgb(87, 241, 103);
+}
+
+.text-reason {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.reason-content {
+    margin: auto;
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.reason-content .card {
+    position: relative;
+    max-width: 300px;
+    height: 420px;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: 0, 3s ease-in-out;
+}
+
+.reason-content .card:hover {
+    height: 420px;
+}
+
+.reason-content .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reason-content .card .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.reason-content .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.reason-content .card .content-2 {
+    padding: 10px 15px;
+    text-align: center;
+
+    color: #111;
+    transition: 0.3s ease-in-out;
+}
+
+.reason-content .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition: 0.3s;
+}
+
+.reason-content .card:hover .content-2 {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -140px;
+    transition: 0.3s;
+}
+
+.nav-action {
+    background-color: #cbdfcb;
+}
+
+.action-content {
+    margin: auto;
+    position: relative;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.action-content .act-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.action-content .act-card:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.action-content .act-card .act-imgBx {
+    position: relative;
+    top: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.action-content .act-card .act-imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action-content .act-card .act-content {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-content .act-card .act-content div {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.nav-contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.nav-contact:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background: url("https://i.pinimg.com/564x/32/18/c0/3218c050e3b10c7edf07e8920bfa81f8.jpg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.contact-box {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.left {
+    height: 100%;
+    background: url("https://img.freepik.com/free-vector/illustrated-save-planet-concept_23-2148513186.jpg?w=740&t=st=1679805817~exp=1679806417~hmac=0f10b0388246a49802cfd0ffd6f84991a90c9dcbf87781ad417ad297e782cf53") no-repeat center;
+    background-size: cover;
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+.right h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.right h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+.field {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230, 230, 230, 0.6);
+    margin-bottom: 22px;
+    transition: .3s;
+    font-size: 1.1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+
+}
+
+.field:focus {
+    background: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.aread {
+    min-height: 150px;
+}
+
+.send-btn {
+    cursor: pointer;
+    width: 90%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #2ecc71;
+    outline: none;
+    border: none;
+    color: #fff;
+    transition: .3s;
+}
+
+.send-btn:hover {
+    background-color: #27ae60;
+}
+
+.border-shape {
+    background: white none repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    height: 3px;
+    left: 0;
+    margin: 20px auto;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 80px;
+}
+
+.border-shape::before {
+    background: white none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 80px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 100px;
+}
+
+.border-shape::after {
+    background: white none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    margin: 0 auto;
+    position: absolute;
+    right: 80px;
+    text-align: center;
+    top: 1px;
+    width: 100px;
+}
+
+footer {
+    width: 100%;
+    background-color: #5bc046;
+    color: #fff;
+}
+
+.top_header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.top_header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.top_header span {
+    padding: 0 1rem;
+}
+
+.top_header .fa {
+    color: #ffbe00;
+    font-size: 35px;
+}
+
+footer .border-shape {
+    width: 40%;
+}
+
+footer .border-shape::before {
+    width: 100%;
+    left: 120px;
+}
+
+footer .border-shape::after {
+    width: 100%;
+    right: 120px;
+}
+
+footer .bottom_content section {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: Center;
+}
+
+.bottom_content a {
+    margin: 0 20px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.5s;
+}
+
+.bottom_content a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.copyright {
+    padding: 0.8em 0;
+    background-color: #1e1e1e;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+@media (max-width:1000px) {
+    .header .menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: -925px;
+        width: 100%;
+        height: 100%;
+        z-index: 300;
+    }
+
+    .header .menu .blank {
+        height: 100%;
+        flex: 1;
+    }
+
+    .header .menu .drawer {
+        box-shadow: 2px 0 12px rgb(0 0 0 / 40%);
+        padding-top: 50px;
+        height: 100%;
+        width: 225px;
+        background: #fff;
+        flex-direction: column;
+        position: fixed;
+        left: -240px;
+        transition: all 200ms linear;
+        overflow: auto;
+    }
+
+    .header .menu .drawer a {
+        padding: 20px;
+    }
+
+    .menu-btn,
+    .close-btn {
+        display: block;
+    }
+
+    .header .logo {
+        margin-left: 17px;
+    }
+
+    .img-slider {
+        width: 100%;
+        height: 600px;
+        margin: auto;
+    }
+    .img-slider img{
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        right: 0;
+        margin: auto;
+    }
+
+    .text {
+        position: absolute;
+        bottom: 300px;
+        left: 60px;
+        font-size: 18px;
+    }
+    .btn {
+        width: 600px;
+        position: absolute;
+        bottom: 200px;
+        left: 60px;
+    }
+    .btn>div {
+        font-size: 16px;
+        margin: 12px;
+        padding: 14px 20px;
+    }
+
+    .drawer-visible {
+        left: 0 !important;
+    }
+
+    .blur {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        left: 0 !important;
+    }
+    .action-content {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        margin: 50px;
+    }
+
+    .action-content .act-card {
+        flex-direction: row;
+        margin: 10px 0;
+    }
+
+    .action-content .act-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .action-content .act-card .act-imgBx,
+    .action-content .act-card .content {
+        width: 50%;
+    }
+
+    .action-content .act-card .act-content {
+        width: 50%;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 400px;
+    }
+
+    .top_header {
+        padding: 1rem;
+        display: block;
+    }
+
+    .top_header section {
+        margin: 40px 0;
+        align-items: left;
+        justify-content: left;
+    }
+
+    footer .bottom_content section {
+        padding: 1rem;
+        display: block;
+    }
+
+    footer .bottom_content section a {
+        padding: 1rem;
+        font-size: 12px;
+        margin: 0 5px;
+        display: inline-block;
+    }
+    .reason-content {
+        width: 90%;
+
+    }
+}
+
+@media (max-width:600px) {
+    .img-slider {
+        height: 500px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .img-slider img {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .text {
+        bottom: 300px;
+        left: 40px;
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 300px;
+        bottom: 240px;
+        left: 40px;
+    }
+
+    .btn>div {
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 40px;
+        border: 2px solid white;
+        margin: 12px;
+        padding: 10px 14px;
+    }
+
+    .nav-content {
+        margin-top: 32px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 4px 4px;
+    }
+
+    .type {
+        letter-spacing: 1px;
+        font-family: monospace;
+        width: 100%;
+    }
+
+    .item-text p {
+        font-size: 20px;
+        font-family: monospace;
+        letter-spacing: 1px;
+    }
+
+    .item {
+        width: 300px;
+    }
+
+    .action-content {
+        margin: auto;
+        margin: auto;
+        position: relative;
+        width: 90%;
+    }
+
+    .action-content .act-card {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .action-content .act-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .action-content .act-card .act-imgBx,
+    .action-content .act-card .content {
+        width: 100%;
+    }
+
+    .action-content .act-card .act-content {
+        width: 100%;
+    }
+    .reason-content {
+        width: 90%;
+
+    }
+
+}
